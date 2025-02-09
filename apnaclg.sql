@@ -79,12 +79,31 @@ create table emp (
   id int,
   salary int  default 25000);
   
-insert into emp (id) emp values (101);
-  
- 
- 
+insert into emp  (id)  values (101);
  # default it used to set the default value for the column if no values were inserted in the column
  
+select * from emp;
+
+create table city (
+id int primary key,
+city varchar(50),
+age int,
+constraint age_check check (age>= 18 and city ="Delhi")
+);
+
+insert into city  values
+(1,'Delhi',20),
+(2,'Delhi',21),
+(3,'Delhi',19);
+
+select * from city;
+
+show databases;
+
+
+
+
+
 
 
 

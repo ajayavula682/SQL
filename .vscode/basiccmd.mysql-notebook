@@ -1,0 +1,62 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "basics.sql",
+    "content": "show databases;\n\nuse collage;\n\nshow tables;\n\nselect * from student;\n\ndrop table student;\n\ncreate table student (\nrollno int primary key,\nname varchar(50),\nmarks int not null,\ngrade varchar(1),\ncity varchar(20)\n);\n\ninsert into student\n(rollno,name,marks,grade,city)\nvalues\n(101,\"ajay\",95,\"A\",\"Tirupathi\"),\n(102,\"Akhil\",90,\"A\",\"Kdp\"),\n(103,\"Max\",85,\"B\",\"Rjp\"),\n(104,\"Bhumika\",90,\"C\",\"Mumbai\"),\n(105,\"Neha\",70,\"c\",\"Hyd\");\n\ninsert into student values(106,\"Amigo\",90,\"A\",\"Tirupathi\");\n\nselect distinct city  from student;\n\nselect * from student where marks > 80; # finding values based on condition\n\nselect * \nfrom student\nwhere marks >80 and  city = \"Tirupathi\";\n\nselect * from student \nwhere city not in (\"Rjp\",\"Kdp\",\"Tirupathi\");\n\nselect * from student \nlimit 2;\n # limit that show the given n number of tuples in data base \n select  COUNT(marks) from student; # moslty we use for the select stmt. return single VALUES\n select  MAX(marks) from student;\n select  MIN(marks) from student;\n select  SUM(marks) from student;\n select  AVG(marks) from student;\n\n\n\n\n \n",
+    "options": {
+        "tabSize": 4,
+        "insertSpaces": true,
+        "indentSize": 4,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 1,
+                    "column": 1
+                },
+                "position": {
+                    "lineNumber": 1,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 29,
+                "column": 1
+            },
+            "firstPositionDeltaTop": -1
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 54,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 1059
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}

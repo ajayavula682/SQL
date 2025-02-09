@@ -1,0 +1,1651 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "basics.sql",
+    "content": "show databases;\n\nuse collage;\n\nshow tables;\n\nselect * from student;\n\ndrop table student;\n\ncreate table student (\nrollno int primary key,\nname varchar(50),\nmarks int not null,\ngrade varchar(1),\ncity varchar(20)\n);\n\ninsert into student\n(rollno,name,marks,grade,city)\nvalues\n(101,\"ajay\",95,\"A\",\"Tirupathi\"),\n(102,\"Akhil\",90,\"A\",\"Kdp\"),\n(103,\"Max\",85,\"B\",\"Rjp\"),\n(104,\"Bhumika\",90,\"C\",\"Mumbai\"),\n(105,\"Neha\",70,\"c\",\"Hyd\");\n\ninsert into student values(106,\"Amigo\",90,\"A\",\"Tirupathi\");\n\nselect distinct city  from student;\n\nselect * from student where marks > 80; # finding values based on condition\n\nselect * \nfrom student\nwhere marks >80 and  city = \"Tirupathi\";\n\nselect * from student \nwhere city not in (\"Rjp\",\"Kdp\",\"Tirupathi\");\n\nselect * from student \nlimit 2; \n# limit that show the given n number of tuples in data base \nshow databases;\n\nuse collage;\n\nselect * from student where marks >80 and city=\"tirupathi\";\n\nselect * from student;\n\n\n\n\n\n \n",
+    "options": {
+        "tabSize": 4,
+        "insertSpaces": true,
+        "indentSize": 4,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": null,
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 57,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "d2c53054-1968-4e48-a157-3a9f0b72fba8",
+                        "74881a79-ba19-4d32-a284-f95c4ce5a3f4",
+                        "c0a2c37b-7e7c-4a2e-bc5d-7e2cae970e9d",
+                        "1e446645-0ac9-483e-c7ed-df12529cb2fd",
+                        "1313cc55-9689-492c-c561-8e77c3f8bc48",
+                        "58891222-f098-458f-f390-d44662089382",
+                        "ffe7d76b-b2da-4f23-cbaf-e3d35c6ff065",
+                        "96ad3429-3e63-4d57-c475-e226172c3bdb",
+                        "99a6e619-1304-4aeb-ad4c-0ba7b2fa2cbf",
+                        "95fc22d3-48b2-4dca-c376-1b2f50ab1a1c",
+                        "48699e34-a496-4076-bebc-cd99f1b6d4d0",
+                        "53f802e0-51ce-4601-90b0-e585fc84c9f0",
+                        "b9d2ec85-6f56-438c-ba1f-451bda315c8b",
+                        "0246dea8-3f98-49f5-c515-30b4bced6a3b",
+                        "4446b682-28d8-40b9-8972-8f632a7d7292",
+                        "ef5a4086-5813-4a1d-b646-ee878a626e0d",
+                        "3a6ee147-d789-407a-c09f-f8a12d0892de"
+                    ]
+                },
+                "currentHeight": 300,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 15
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 15,
+                            "length": 14
+                        },
+                        "contentStart": 17,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 29,
+                            "length": 14
+                        },
+                        "contentStart": 31,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 43,
+                            "length": 24
+                        },
+                        "contentStart": 45,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 67,
+                            "length": 21
+                        },
+                        "contentStart": 70,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 88,
+                            "length": 124
+                        },
+                        "contentStart": 90,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 212,
+                            "length": 206
+                        },
+                        "contentStart": 214,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 418,
+                            "length": 61
+                        },
+                        "contentStart": 420,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 479,
+                            "length": 37
+                        },
+                        "contentStart": 481,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 516,
+                            "length": 41
+                        },
+                        "contentStart": 518,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 557,
+                            "length": 101
+                        },
+                        "contentStart": 595,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 658,
+                            "length": 69
+                        },
+                        "contentStart": 660,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 727,
+                            "length": 33
+                        },
+                        "contentStart": 729,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 760,
+                            "length": 78
+                        },
+                        "contentStart": 823,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 838,
+                            "length": 14
+                        },
+                        "contentStart": 840,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 852,
+                            "length": 61
+                        },
+                        "contentStart": 854,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 913,
+                            "length": 24
+                        },
+                        "contentStart": 915,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 937,
+                            "length": 8
+                        },
+                        "contentStart": 936,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "2",
+                    "resultId": "d2c53054-1968-4e48-a157-3a9f0b72fba8",
+                    "rows": [
+                        {
+                            "0": "collage"
+                        },
+                        {
+                            "0": "dupe"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "temp2"
+                        },
+                        {
+                            "0": "XYZ"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 1.014ms"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "show databases",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "74881a79-ba19-4d32-a284-f95c4ce5a3f4",
+                    "rows": [
+                        {
+                            "0": "payment"
+                        },
+                        {
+                            "0": "student"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_collage",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.106ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 2,
+                    "sql": "\n\nshow tables",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "c0a2c37b-7e7c-4a2e-bc5d-7e2cae970e9d",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "ajay",
+                            "2": 95,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        },
+                        {
+                            "0": 102,
+                            "1": "Akhil",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Kdp"
+                        },
+                        {
+                            "0": 103,
+                            "1": "Max",
+                            "2": 85,
+                            "3": "B",
+                            "4": "Rjp"
+                        },
+                        {
+                            "0": 104,
+                            "1": "Bhumika",
+                            "2": 90,
+                            "3": "C",
+                            "4": "Mumbai"
+                        },
+                        {
+                            "0": 105,
+                            "1": "Neha",
+                            "2": 70,
+                            "3": "c",
+                            "4": "Hyd"
+                        },
+                        {
+                            "0": 106,
+                            "1": "Amigo",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 0.218ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 3,
+                    "sql": "\n\nselect * from student",
+                    "updatable": true,
+                    "fullTableName": "student"
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "1e446645-0ac9-483e-c7ed-df12529cb2fd",
+                    "rows": [
+                        {
+                            "0": "Tirupathi"
+                        },
+                        {
+                            "0": "Kdp"
+                        },
+                        {
+                            "0": "Rjp"
+                        },
+                        {
+                            "0": "Mumbai"
+                        },
+                        {
+                            "0": "Hyd"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "city",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 0.453ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 8,
+                    "sql": "\n\nselect distinct city  from student",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "1313cc55-9689-492c-c561-8e77c3f8bc48",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "ajay",
+                            "2": 95,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        },
+                        {
+                            "0": 102,
+                            "1": "Akhil",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Kdp"
+                        },
+                        {
+                            "0": 103,
+                            "1": "Max",
+                            "2": 85,
+                            "3": "B",
+                            "4": "Rjp"
+                        },
+                        {
+                            "0": 104,
+                            "1": "Bhumika",
+                            "2": 90,
+                            "3": "C",
+                            "4": "Mumbai"
+                        },
+                        {
+                            "0": 106,
+                            "1": "Amigo",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 0.48ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 9,
+                    "sql": "\n\nselect * from student where marks > 80",
+                    "updatable": true,
+                    "fullTableName": "student"
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "58891222-f098-458f-f390-d44662089382",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "ajay",
+                            "2": 95,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        },
+                        {
+                            "0": 106,
+                            "1": "Amigo",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 0.368ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 10,
+                    "sql": " # finding values based on condition\n\nselect * \nfrom student\nwhere marks >80 and  city = \"Tirupathi\"",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "ffe7d76b-b2da-4f23-cbaf-e3d35c6ff065",
+                    "rows": [
+                        {
+                            "0": 104,
+                            "1": "Bhumika",
+                            "2": 90,
+                            "3": "C",
+                            "4": "Mumbai"
+                        },
+                        {
+                            "0": 105,
+                            "1": "Neha",
+                            "2": 70,
+                            "3": "c",
+                            "4": "Hyd"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 0.463ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 11,
+                    "sql": "\n\nselect * from student \nwhere city not in (\"Rjp\",\"Kdp\",\"Tirupathi\")",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "96ad3429-3e63-4d57-c475-e226172c3bdb",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "ajay",
+                            "2": 95,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        },
+                        {
+                            "0": 102,
+                            "1": "Akhil",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Kdp"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 0.542ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 12,
+                    "sql": "\n\nselect * from student \nlimit 2",
+                    "updatable": true,
+                    "fullTableName": "student"
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "99a6e619-1304-4aeb-ad4c-0ba7b2fa2cbf",
+                    "rows": [
+                        {
+                            "0": "collage"
+                        },
+                        {
+                            "0": "dupe"
+                        },
+                        {
+                            "0": "information_schema"
+                        },
+                        {
+                            "0": "mysql"
+                        },
+                        {
+                            "0": "performance_schema"
+                        },
+                        {
+                            "0": "sys"
+                        },
+                        {
+                            "0": "temp2"
+                        },
+                        {
+                            "0": "XYZ"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Database",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 0.933ms"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 13,
+                    "sql": " \n# limit that show the given n number of tuples in data base \nshow databases",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "95fc22d3-48b2-4dca-c376-1b2f50ab1a1c",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "ajay",
+                            "2": 95,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        },
+                        {
+                            "0": 106,
+                            "1": "Amigo",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 0.72ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 15,
+                    "sql": "\n\nselect * from student where marks >80 and city=\"tirupathi\"",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "48699e34-a496-4076-bebc-cd99f1b6d4d0",
+                    "rows": [
+                        {
+                            "0": 101,
+                            "1": "ajay",
+                            "2": 95,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        },
+                        {
+                            "0": 102,
+                            "1": "Akhil",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Kdp"
+                        },
+                        {
+                            "0": 103,
+                            "1": "Max",
+                            "2": 85,
+                            "3": "B",
+                            "4": "Rjp"
+                        },
+                        {
+                            "0": 104,
+                            "1": "Bhumika",
+                            "2": 90,
+                            "3": "C",
+                            "4": "Mumbai"
+                        },
+                        {
+                            "0": 105,
+                            "1": "Neha",
+                            "2": 70,
+                            "3": "c",
+                            "4": "Hyd"
+                        },
+                        {
+                            "0": 106,
+                            "1": "Amigo",
+                            "2": 90,
+                            "3": "A",
+                            "4": "Tirupathi"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "rollno",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "marks",
+                            "field": "2",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "grade",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        },
+                        {
+                            "title": "city",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": true,
+                            "autoIncrement": false,
+                            "default": null
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 6 records retrieved in 0.356ms"
+                    },
+                    "totalRowCount": 6,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 16,
+                    "sql": "\n\nselect * from student",
+                    "updatable": true,
+                    "fullTableName": "student"
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "53f802e0-51ce-4601-90b0-e585fc84c9f0",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.452ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\n\nuse collage",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "b9d2ec85-6f56-438c-ba1f-451bda315c8b",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 18.494ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 4,
+                    "sql": "\n\ndrop table student",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "0246dea8-3f98-49f5-c515-30b4bced6a3b",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 11.964ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 5,
+                    "sql": "\n\ncreate table student (\nrollno int primary key,\nname varchar(50),\nmarks int not null,\ngrade varchar(1),\ncity varchar(20)\n)",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "4446b682-28d8-40b9-8972-8f632a7d7292",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 5 rows affected in 3.141ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 6,
+                    "sql": "\n\ninsert into student\n(rollno,name,marks,grade,city)\nvalues\n(101,\"ajay\",95,\"A\",\"Tirupathi\"),\n(102,\"Akhil\",90,\"A\",\"Kdp\"),\n(103,\"Max\",85,\"B\",\"Rjp\"),\n(104,\"Bhumika\",90,\"C\",\"Mumbai\"),\n(105,\"Neha\",70,\"c\",\"Hyd\")",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "ef5a4086-5813-4a1d-b646-ee878a626e0d",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 1 row affected in 0.456ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 7,
+                    "sql": "\n\ninsert into student values(106,\"Amigo\",90,\"A\",\"Tirupathi\")",
+                    "updatable": false
+                },
+                {
+                    "tabId": "2",
+                    "resultId": "3a6ee147-d789-407a-c09f-f8a12d0892de",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.27ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 14,
+                    "sql": "\n\nuse collage",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 1,
+                "end": 57,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 15
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 15,
+                            "length": 14
+                        },
+                        "contentStart": 17,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 29,
+                            "length": 14
+                        },
+                        "contentStart": 31,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 43,
+                            "length": 24
+                        },
+                        "contentStart": 45,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 67,
+                            "length": 21
+                        },
+                        "contentStart": 70,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 88,
+                            "length": 124
+                        },
+                        "contentStart": 90,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 212,
+                            "length": 206
+                        },
+                        "contentStart": 214,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 418,
+                            "length": 61
+                        },
+                        "contentStart": 420,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 479,
+                            "length": 37
+                        },
+                        "contentStart": 481,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 516,
+                            "length": 41
+                        },
+                        "contentStart": 518,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 557,
+                            "length": 101
+                        },
+                        "contentStart": 595,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 658,
+                            "length": 69
+                        },
+                        "contentStart": 660,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 727,
+                            "length": 33
+                        },
+                        "contentStart": 729,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 760,
+                            "length": 78
+                        },
+                        "contentStart": 823,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 838,
+                            "length": 14
+                        },
+                        "contentStart": 840,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 852,
+                            "length": 61
+                        },
+                        "contentStart": 854,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 913,
+                            "length": 24
+                        },
+                        "contentStart": 915,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 937,
+                            "length": 8
+                        },
+                        "contentStart": 936,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}

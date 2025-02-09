@@ -1,5 +1,7 @@
 show databases;
 
+show databases;
+
 use collage;
 
 show tables;
@@ -39,32 +41,7 @@ select * from student
 where city not in ("Rjp","Kdp","Tirupathi");
 
 select * from student 
-limit 2; 
-# limit that show the given n number of tuples in data base 
-show databases;
-
-use collage;
-
-select * from student where marks >80 and city="tirupathi";
-
-select * from student where marks != 90;
-
-select * from student where marks  between  80 and 93;
-
-select * from student where city in ("Rjp","tirupathi"); #  checks in the given values
-
-select * from student where city not in ("Rjp","Kdp","Tirupathi"); # gives oposite to the given condition --> checks opposite 
-
-select name,marks from student
-where marks > 80 
-limit  2;
-
-
-
-
-
-
-
+limit 2; # limit that show the given n number of tuples in data base 
 
 
 
