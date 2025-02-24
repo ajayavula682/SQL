@@ -132,7 +132,7 @@ select mode,count(customer)
 from payments
 group by mode;
 
-select * from student;
+select * from students;
 
 set SQL_safe_updates=0; # by default in sql you have safe mode
 # turn on  to turn off this we use the following command
@@ -193,6 +193,135 @@ insert into teacher
 values
 (101,"Adam",101),
 (102,"Eve",102);
+
+select * from dept;
+
+#rename table teacher as teachers;
+
+show tables;
+
+alter table  student # to add or to modify the exsisting tables columns
+add column age int;
+
+
+
+alter table student
+drop column age;# command of alter to drop the column
+
+alter table student # alter command to rename the table name
+rename to students;
+
+alter table students# alter command to rename the column name
+change column  age stu_age int;
+
+alter table students
+add column age int not null default 19;
+
+alter table students
+modify column age varchar(2);
+
+select * from students;
+
+insert into students
+values
+(107,"gargi",68,"O","Kadapa",100);
+
+truncate table  students;# this command delete all 
+#the values in the table and not the structutre of the table
+
+alter table students
+change column name student_name varchar(20);
+
+delete * from  students
+where marks <= 80;
+
+set SQL_safe_updates=0;# command disable the safemode
+
+delete from students
+where marks < 80;
+
+set SQL_safe_updates=1;#command enable the safemode
+
+alter table students
+drop column grade;
+
+select * from students;
+
+alter table students 
+drop column city,
+drop column stu_age;
+
+create table course (
+stu_id int ,
+course varchar(20));
+
+select * from course;
+
+insert into course
+values
+(100,"english"),
+(105,"math"),
+(103,"science"),
+(107,"computer science");
+
+select * # example for inner join
+from students as s # output is generates are the rows which are overlaped
+inner join course as c # here we also used the alias for shorter notation of  names
+on s.stu_id =c.stu_id;
+
+select * # example for left exclusive  join
+from students as s # output is generates are the rows which are overlaped
+left join course as c # here we also used the alias for shorter notation of  names
+on s.stu_id =c.stu_id
+where c.stu_id is null;
+
+select * # example for right  exclusive  join
+from students as s # output is generates are the rows which are overlaped
+right join course as c # here we also used the alias for shorter notation of  names
+on s.stu_id =c.stu_id
+where s.stu_id is null;
+
+select *  # left joins here we get all left table values 
+from students as s # with over lapping values of right table
+left join course as c
+on s.stu_id=c.stu_id;
+
+select * from  # right joins get all right values with overlapped 
+students as s # right and left table values.
+right join course as c
+on s.stu_id=c.stu_id;
+
+select * from students,course; # it wont give full joins (wrong syntax)
+
+
+select *  # left joins here we get all left table values (full joins by union)
+from students as s # with over lapping values of right table
+left join course as c
+on s.stu_id=c.stu_id
+union
+select * from  # right joins get all right values with overlapped 
+students as s # right and left table values.
+right join course as c
+on s.stu_id=c.stu_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
