@@ -87,6 +87,10 @@ group by grade order by grade;
  having max(marks) >90;
  
 start transaction;
+
+show databases;
+
+use collage;
  
 update student 
 set grade ="O"
@@ -127,6 +131,74 @@ select * from payments;
 select mode,count(customer)
 from payments
 group by mode;
+
+select * from student;
+
+set SQL_safe_updates=0; # by default in sql you have safe mode
+# turn on  to turn off this we use the following command
+
+set sql_safe_updates=1; # to turn back on.
+
+update student 
+set grade ="O"
+where grade ="A";
+
+update student
+set grade ="f"
+where marks between 80 and 90;
+
+update student 
+set marks =marks+1;
+
+select * from student;
+
+delete from student
+where marks < 92;
+
+
+use collage;
+
+show databases;
+
+create table dept (
+id int primary key,
+name varchar(50)
+); 
+
+insert into dept
+values
+(101,"English"),
+(102,"CSE");
+
+select * from dept;
+
+update dept 
+set id=103
+where id=102;
+
+select * from teacher;
+
+drop  table teacher; #this drops the table 
+
+create table teacher (
+id int primary key,
+name varchar(50),
+dept_id int,
+foreign key (dept_id) references dept(id)
+on delete cascade
+on update cascade
+);
+
+insert into teacher
+values
+(101,"Adam",101),
+(102,"Eve",102);
+
+
+
+
+
+
 
 
 
